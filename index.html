@@ -11,6 +11,7 @@
     <title>Un Mensaje Especial para Ti</title>
 
     <style>
+        /*
         :root {
             --color-fondo-gradiente-1: #e0c3fc;
             --color-fondo-gradiente-2: #8ec5fc;
@@ -29,7 +30,7 @@
             --duracion-apertura: 1.7s;
         }
 
-        /* --- PANTALLA DE CARGA --- */
+       
         #loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: #f0f0f0; display: flex; justify-content: center; align-items: center;
@@ -60,15 +61,15 @@
             background-size: cover; background-position: center;
             background-blend-mode: screen; overflow: hidden;
             
-            /* --- BLOQUEO DE SELECCIÓN (NUEVO) --- */
-            -webkit-user-select: none; /* Safari */
-            -moz-user-select: none;    /* Firefox */
-            -ms-user-select: none;     /* Internet Explorer/Edge */
-            user-select: none;         /* Estándar */
-            -webkit-tap-highlight-color: transparent; /* Evita el destello al tocar en móviles */
+    
+            -webkit-user-select: none; 
+            -moz-user-select: none;   
+            -ms-user-select: none;    
+            user-select: none;    
+            -webkit-tap-highlight-color: transparent; 
         }
         
-        .main-content { /* Contenedor para mover título y sobre juntos */
+        .main-content { 
             display: flex; flex-direction: column; align-items: center;
             transition: transform 0.5s ease;
         }
@@ -90,10 +91,10 @@
         
         .envoltura-sobre.abierto, .envoltura-sobre.cerrando { animation: none; }
 
-        /* --- LATIDO DE CARTA INCREMENTADO (MODIFICADO) --- */
+
         @keyframes latido {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.07); } /* Aumentado de 1.05 a 1.07 */
+            50% { transform: scale(1.07); } 
         }
 
         .sobre {
@@ -156,12 +157,12 @@
             animation: temblor-corazon 0.4s linear infinite;
         }
 
-        /* --- EFECTO DE TEMBLOR INCREMENTADO (MODIFICADO) --- */
+   
         @keyframes temblor-corazon {
             0% { transform: translate(-50%, -70%) rotate(45deg) scale(1.0); }
-            25% { transform: translate(-50%, -70%) rotate(42deg) scale(1.1); } /* Rotación y escala aumentadas */
-            50% { transform: translate(-50%, -70%) rotate(45deg) scale(1.2); } /* Escala máxima aumentada */
-            75% { transform: translate(-50%, -70%) rotate(48deg) scale(1.1); } /* Rotación y escala aumentadas */
+            25% { transform: translate(-50%, -70%) rotate(42deg) scale(1.1); }
+            50% { transform: translate(-50%, -70%) rotate(45deg) scale(1.2); } 
+            75% { transform: translate(-50%, -70%) rotate(48deg) scale(1.1); } 
             100% { transform: translate(-50%, -70%) rotate(45deg) scale(1.0); }
         }
 
@@ -231,9 +232,9 @@
         }
         
         @media (max-width: 768px) {
-            /* --- AJUSTE DE POSICIÓN EN MÓVILES (NUEVO) --- */
+    
             .main-content {
-                transform: translateY(-5vh); /* Sube todo el contenido un 5% de la altura de la pantalla */
+                transform: translateY(-5vh);
             }
 
             h1 { font-size: 2.9rem; }
@@ -267,10 +268,11 @@
             25% { opacity: 1; transform: translate(var(--x-mid), var(--y-mid)) scale(1.8) rotate(var(--r-mid)); }
             100% { opacity: 0; transform: translate(var(--x-end), var(--y-end)) scale(var(--s-end)) rotate(var(--r-end)); }
         }
+        /*
     </style>
 </head>
 <body>
-
+<!--
     <div id="loader">
         <div class="loader-icon">💌</div>
         <div class="progress-bar-container">
@@ -474,5 +476,7 @@
       audio.play().catch(err => console.log("Bloqueado por navegador:", err));
     }, { once: true }); // se ejecuta solo en el primer clic
     </script>
+    -->
 </body>
+
 </html>
